@@ -1,5 +1,5 @@
 #
-# dockerfile - ubuntu 16.04, oracle-java8, mysql-server, maven, awscli
+# dockerfile - ubuntu 16.04, oracle-java8, mysql-server, maven
 #
 
 # Use ubuntu:16.04 as base image
