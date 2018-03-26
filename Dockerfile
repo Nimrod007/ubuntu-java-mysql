@@ -5,7 +5,7 @@
 # Use ubuntu:16.04 as base image
 FROM ubuntu:16.04
 
-MAINTAINER Hari Krishna Ganji <dostiharise@gmail.com>
+MAINTAINER Nimrod lahav <nimrod.lahav@gmail.com>
 
 # Install essentials
 RUN \
@@ -38,11 +38,4 @@ RUN \
 RUN \
     apt-get update && \
     apt-get install -y maven && \
-    rm -rf /var/lib/apt/lists/*
-
-#Install AWS CLI
-RUN \
-    apt-get update && \
-    apt-get install -y python-pip groff && \
-    pip install awscli && \
     rm -rf /var/lib/apt/lists/*
