@@ -1,4 +1,4 @@
-# ubuntu-java-mysql
+# ubuntu 16.04 | JDK8 | mvn | mysql
 
 Docker build file for ubuntu 16.04, oracle-java8, mysql-server, maven.
 
