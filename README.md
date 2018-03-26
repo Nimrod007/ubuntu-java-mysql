@@ -1,6 +1,29 @@
 # ubuntu-java-mysql
 
-Docker build file for ubuntu 16.04, oracle-java8, mysql-server, maven, awscli.
+Docker build file for ubuntu 16.04, oracle-java8, mysql-server, maven.
+
+### used in jenkins pipeline 
+```groovy
+        docker.image("nimrod007/ubuntu-jdk-mysql-mvn").inside('-u root') {
+
+            stage("Create MYSQL-DB") {
+                try {
+                    sh 'service mysql start'
+                    sh 'mysql -uroot -e "create database logger"'
+                    sh 'mysql -uroot -e "CREATE USER user@localhost"'
+                    sh 'mysql -uroot -e "GRANT ALL PRIVILEGES ON *.* TO \"user\"@\"localhost\" IDENTIFIED BY \'pass\' WITH GRANT OPTION"'
+                } catch (e) { echo "error is mysql creation"
+                } finally {
+                    sh 'cat /var/log/mysql/*.log'
+                }
+            }
+
+            stage("Build & Test") {
+                sh 'mvn clean install'
+            }
+        }
+
+```
 
 Suitable for running maven builds, tests and deploying to aws.
 
