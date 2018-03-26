@@ -35,3 +35,9 @@ Docker images at - https://hub.docker.com/r/dostiharise/ubuntu-java-mysql/
 - dockerfile/ubuntu - https://github.com/dockerfile/ubuntu/blob/master/Dockerfile
 - dockerfile/oracle-java8 - https://github.com/dockerfile/java/blob/master/oracle-java8/Dockerfile
 - dockerfile/mysql - https://github.com/dockerfile/mysql/blob/master/Dockerfile
+
+** build **
+```bash
+docker build --tag nimrod007/ubuntu-jdk-mysql-mvn:latest .
+docker push nimrod007/ubuntu-jdk-mysql-mvn:latest
+```
