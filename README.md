@@ -27,7 +27,7 @@ Docker build file for ubuntu 16.04, oracle-java8, mysql-server, maven.
 
 Suitable for running maven builds, tests and deploying to aws.
 
-Docker images at - https://hub.docker.com/r/dostiharise/ubuntu-java-mysql/
+Docker images at - https://hub.docker.com/r/nimrod007/ubuntu-jdk-mysql-mvn/
 
 **References**
 
